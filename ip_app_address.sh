@@ -19,10 +19,10 @@ echo "COPY ip_app_address.py /home/myapp/" >> tempdir/Dockerfile
 echo "COPY ip_add_json.py /home/myapp/" >> tempdir/Dockerfile
 echo "COPY ip_add_json2.py /home/myapp/" >> tempdir/Dockerfile
 
-echo "EXPOSE 5050" >> tempdir/Dockerfile
+echo "EXPOSE 6060" >> tempdir/Dockerfile
 echo "CMD python3 /home/myapp/ip_app_address.py" >> tempdir/Dockerfile
 
 cd tempdir
 docker build -t ipaddapp .
-docker run -t -d -p 5050:5050 --name ipaddapprunning ipaddapp
+docker run -t -d -p 6060:6060 --name ipaddapprunning ipaddapp
 docker ps -a

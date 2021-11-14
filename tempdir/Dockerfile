@@ -6,5 +6,5 @@ COPY ./templates /home/myapp/templates/
 COPY ip_app_address.py /home/myapp/
 COPY ip_add_json.py /home/myapp/
 COPY ip_add_json2.py /home/myapp/
-EXPOSE 5050
+EXPOSE 6060
 CMD python3 /home/myapp/ip_app_address.py
